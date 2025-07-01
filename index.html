@@ -277,6 +277,33 @@
 
 
 
+
+
+
+
+
+
+
+
+   #btnTutorial {
+  margin: 10px auto;
+  display: block;
+  font-size: 12px;
+  padding: 4px 10px;
+  background-color: #179800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+#btnTutorial:hover {
+  background-color: #127600;
+}
+   
+
   </style>
 
 </head>
@@ -824,14 +851,26 @@ function updateDisplay() {
 <script src="MPayment/Modal.js"></script>
 
 
-<div id="apresentacao" style="width: 95%; margin: 12px auto; padding: 8px; background: #fff; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.15); font-family: sans-serif;">
+<!-- Botão Tutorial -->
+<button id="btnTutorial" onclick="toggleTutorial()">❔ Tutorial</button>
+
+<!-- Banner de Apresentação -->
+<div id="apresentacao" style="display: none; width: 95%; margin: 12px auto; padding: 8px; background: #fff; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.15); font-family: sans-serif;">
   <h2 style="color: #179800; font-size: 14px; margin: 0 0 6px;">🎮 Como Jogar – Zebrinha Caça-Níquel</h2>
-  <p style="font-size: 12px; margin: 4px 0;"><strong>1.</strong> Escolha até <strong>5 animmmais</strong> clicando nos escudos.</p>
+  <p style="font-size: 12px; margin: 4px 0;"><strong>1.</strong> Escolha até <strong>5 animais</strong> clicando nos escudos.</p>
   <p style="font-size: 12px; margin: 4px 0;"><strong>2.</strong> Aposte de <strong>1 a 5 créditos</strong> por bicho.</p>
   <p style="font-size: 12px; margin: 4px 0;"><strong>3.</strong> Clique em <strong style="color:red;">JOGAR</strong> para rodar.</p>
-  <p style="font-size: 13px; margin: 4px 0;">Cada animal apostado vale 25x o valor da apostar, se acertar azebra ganha <strong>100x</strong>!</p>
+  <p style="font-size: 13px; margin: 4px 0;">Cada animal apostado vale 25x o valor da aposta, se acertar a zebra ganha <strong>100x</strong>!</p>
   <p style="font-size: 10px; margin-top: 6px;">Use <strong>Recarga via Pix</strong> se os créditos acabarem.</p>
 </div>
+
+<script>
+  function toggleTutorial() {
+    const banner = document.getElementById('apresentacao');
+    banner.style.display = (banner.style.display === 'none') ? 'block' : 'none';
+  }
+</script>
+  
 
 
 
